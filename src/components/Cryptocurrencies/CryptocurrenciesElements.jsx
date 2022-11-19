@@ -8,7 +8,7 @@ export const SearchContainer = styled.input`
   align-items: center;
   text-align: center;
 
-  color: white;
+  color: black;
   background: #fff;
   margin: 10px 10px 10px 5px;
   overflow: hidden;
@@ -33,8 +33,8 @@ export const SearchContainer = styled.input`
 `;
 
 export const CryptocurrenciesCard = styled.div`
-  color: white;
-  background: #fff;
+  color: black;
+  background: #F7F7F7;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -42,12 +42,7 @@ export const CryptocurrenciesCard = styled.div`
   margin: 5px;
   overflow: hidden;
   padding: 30px;
-  transition: all 0.2s ease-in-out;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
+  transition: all 0.05s ease-in-out;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -55,8 +50,8 @@ export const CryptocurrenciesCard = styled.div`
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
   &:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+    transition: all 0.05s ease-in-out;
     cursor: pointer;
   }
 `;
@@ -72,7 +67,7 @@ export const CryptoCardHeader = styled.div`
 
 export const CryptocurrenciesName = styled.h1`
   width: 90%;
-  color: #d7d7d7;
+  color: black;
   font-size: 1.5rem;
 `;
 export const CryptocurrenciesImage = styled.img`

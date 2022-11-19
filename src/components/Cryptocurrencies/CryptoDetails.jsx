@@ -42,7 +42,7 @@ const CryptoDetails = () => {
         {title: 'Rank', value: cryptoDetails?.rank, icon: <NumberOutlined/>},
         {
             title: '24h Volume',
-            value: `₹ ${cryptoDetails['24hVolume'] && millify(cryptoDetails['24hVolume'])}`,
+            value: `$ ${cryptoDetails['24hVolume'] && millify(cryptoDetails['24hVolume'])}`,
             icon: <ThunderboltOutlined/>
         },
         {

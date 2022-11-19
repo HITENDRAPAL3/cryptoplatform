@@ -9,7 +9,7 @@ import {shortenAddress} from "../utils/shortenAddress";
 import {Loader} from './'
 
 
-const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white"
+const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-normal text-black"
 
 const Input = ({placeholder, name, type, value, handleChange}) => (
     <input
@@ -18,7 +18,7 @@ const Input = ({placeholder, name, type, value, handleChange}) => (
         step="0.0001"
         value={value}
         onChange={(e) => handleChange(e, name)}
-        className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
+        className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-black border-none text-sm white-glassmorphism"
     />
 );
 
@@ -44,22 +44,22 @@ const Welcome = () => {
         <div className={"flex w-full justify-center items-center"}>
             <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
                 <div className="flex flex-1 justify-start flex-col mf:mr-10">
-                    <h1 className={"text-3xl sm:text-5xl text-white text-gradient py-1"}>
+                    <h1 className={"text-3xl sm:text-5xl text-black text-gradient py-1"}>
                         Send Crypto <br/> across the world
                     </h1>
 
-                    <p className={"text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base"}>
-                        Explore the crypto world. Buy and sell cryptocurrencies easily on CryptoverseWeb3.
+                    <p className={"text-left mt-5 text-black font-normal md:w-9/12 w-11/12 text-base"}>
+                        Buy and sell cryptocurrencies easily on Crypto Central.
                     </p>
 
                     {!currentAccount && (
                         <button
                             type="button"
                             onClick={connectWallet}
-                            className="flex flex-row justify-center items-center my-5 bg-[#F58610]  rounded-lg cursor-pointer hover:bg-[#D67610]"
+                            className="flex flex-row justify-center items-center my-5 bg-[#ff0000]  rounded-lg cursor-pointer hover:bg-[#D67610]"
                         >
                             <AiFillPlayCircle className="text-white mr-2"/>
-                            <p className="text-white text-base font-semibold mt-3">
+                            <p className="text-black text-base font-semibold mt-3">
                                 Connect Wallet
                             </p>
                         </button>
@@ -93,7 +93,7 @@ const Welcome = () => {
                             </div>
 
                             <div>
-                                <p className={"text-white font-light text-sm"}>
+                                <p className={"text-white font-semibold text-sm"}>
                                     Address: <br/> {shortenAddress(currentAccount)}
                                 </p>
                                 <p className={"text-white font-semibold text-lg mt-1"}>
@@ -116,7 +116,7 @@ const Welcome = () => {
                             : (<button
                                 type="button"
                                 onClick={handleSubmit}
-                                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+                                className="text-black w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] hover:text-white rounded-full cursor-pointer"
                             >
                                 Send now
                             </button>)

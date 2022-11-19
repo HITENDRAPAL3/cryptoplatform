@@ -23,46 +23,38 @@ const Navbar = () => {
       }
     >
       <div className={"md:flex-[0.5] flex-initial justify-center items-center"}>
-        <Link to="/">
+        <Link to="/market">
           <img
             src={logo}
             alt="cryptoverseWeb3 logo"
-            className={"w-48 cursor-pointer"}
+            className={"w-60 cursor-pointer"}
           />
         </Link>
       </div>
 
       <ul
         className={
-          "navbar-size text-white md:flex hidden list-none flex-row justify-between items-center flex-initial"
+          "navbar-size text-black md:flex hidden list-none flex-row justify-between items-center flex-initial"
         }
       >
         {[
-          <Link className={"text-white"} to="/market">
-            Market
+          <Link className={"text-black font-semibold text-xl"} to="/market">
+            Home
           </Link>,
-          <Link className={"text-white"} to="/cryptocurrencies">
+          <Link className={"text-black font-semibold text-xl"} to="/cryptocurrencies">
             Cryptocurrencies
           </Link>,
-          <Link className={"text-white"} to="/news">
+          <Link className={"text-black font-semibold text-xl"} to="/news">
             Crypto News
           </Link>,
-          <Link className={"text-white"} to="/blogs">
-            Blogs
-          </Link>,
-          <Link className={"text-white"} to="/">
+
+          <Link className={"text-black font-semibold text-xl"} to="/">
             Wallets
           </Link>,
-          <Link className={"text-white"} to="/TransactionsHistory">
+          <Link className={"text-black font-semibold text-xl"} to="/TransactionsHistory">
             Transactions History
           </Link>,
-          <a
-            className={"text-white"}
-            href="https://www.youtube.com/channel/UCu7EGHHiNgEN2228BKD1pqg/?sub_confirmation=1"
-            target={"_blank"}
-          >
-            Tutorials
-          </a>,
+          
         ].map((item, index) => (
           <NavbarItem key={item + index} title={item} />
         ))}
@@ -96,54 +88,28 @@ const Navbar = () => {
               />
             </li>
             {[
-              <Link className={"text-white"} to="/">
-                Home
+              
+              <Link className={"text-black"} to="/market">
+              Home
               </Link>,
-              <Link className={"text-white"} to="/market">
-                Market
-              </Link>,
-              <Link className={"text-white"} to="/cryptocurrencies">
+              <Link className={"text-black"} to="/cryptocurrencies">
                 Cryptocurrencies
               </Link>,
-              <Link className={"text-white"} to="/news">
+              <Link className={"text-black"} to="/news">
                 Crypto News
               </Link>,
-              <Link className={"text-white"} to="/blogs">
-                Blogs
-              </Link>,
-              <Link className={"text-white"} to="/">
+              <Link className={"text-black"} to="/">
                 Wallets
               </Link>,
-              <Link className={"text-white"} to="TransactionsHistory">
+              <Link className={"text-black"} to="TransactionsHistory">
                 Transactions History
-              </Link>,
-              <a
-                className={"text-white"}
-                href="https://www.youtube.com/channel/UCu7EGHHiNgEN2228BKD1pqg/?sub_confirmation=1"
-                target={"_blank"}
-              >
-                Tutorials
-              </a>,
+              </Link>
+             
             ].map((item, index) => (
               <NavbarItem key={item + index} title={item} />
             ))}
 
-            <div className={"mt-5"}>
-              <li
-                className={
-                  "bg-[#ed830e] py-1 px-4 mx-1 rounded-lg cursor-pointer hover:bg-[#f26c3c]"
-                }
-              >
-                <a
-                  className={"text-white"}
-                  href="https://www.linktree.com/CryptoverseWeb3"
-                  target={"_blank"}
-                >
-                  {" "}
-                  Social links
-                </a>
-              </li>
-            </div>
+            
           </ul>
         )}
       </div>
